@@ -1,0 +1,503 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'popins',sans-serif;
+}
+body{
+    color:black;
+    background: white;
+}
+.header
+{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 15px 10%;
+    background: purple;
+    border-radius: 50px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position:relative;
+    font-size: 25px;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor:default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left:35px;
+    transition:.3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards ;
+}
+.navbar a:hover{
+    color:green;
+}
+.home{
+    position:relative;
+    width:100%;
+    justify-content: space-between;
+    height:100vh;
+    background-color: white;
+    color: black;
+    display:flex;
+    align-items:center;
+    padding: 70px 10% 0;
+    
+}
+
+.home-content img {
+    border-radius: 60%;
+    width: 30rem;
+    height:25rem;
+    
+  }
+.top-left{
+    position:absolute;
+    top:270px;
+    left:30px;
+}  
+.home-content{
+    max-width:500px;
+
+}
+.home-content h2{
+    font-size:25px;
+    font-weight:700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 30px;
+
+}
+.home-content h1 {
+    color: purple;
+    font-size:32px;
+    font-weight:700;
+    margin:-3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0s;
+}
+.home-content p{
+    font-size:20px;
+    padding-bottom: 15px;
+
+}
+
+
+.about{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items:center;
+    gap:1.5rem;
+}
+.about-img img{
+border-radius: 70%;
+height: 420px;
+width: 450px;
+transition: transform 0.5s;
+}
+.about-img:hover img{
+    transform: scale(0.9);
+}
+.about-text h2{
+    color:black;
+    font-size: 60px;
+    margin-top: -50px;
+    margin-left:-210px;
+    padding-left: 240px;
+}
+
+
+.about-text h4{
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+    line-height: 1.7;
+    margin: 0 30px;
+}
+
+.about-text p{
+    color: black;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+#services{
+    color:black;
+    font-size:20px;
+    line-height:1.4;
+    margin-bottom: 4rem;
+}
+
+.sub-title .span{
+    color:white;
+    font-size: 20px;
+    font-weight: 200px;
+}
+.sub-title{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+.sub-title span{
+      color:#0ef;
+}
+
+.container{
+    padding: 90px;
+
+}
+.services-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    grid-gap:40px;
+    margin-top:50px;
+}
+.services-list div{
+    background-color:transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 0px 20px red,
+    0px 0px 20px orangered;
+}
+
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services div a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+
+}
+.read {
+    display: inline-block;
+    padding:12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop is ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef;
+}
+.read:hover{
+    background: #0ef;
+    color:#081b29;
+   box-shadow: 0 0 20px #0ef;
+}
+.services-list div:hover{
+    transform: translateY(-10px);
+}
+
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(-0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.Technical-bars{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap:2rem;
+    margin-top: 4rem;
+   
+
+}
+.bar{
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 0;
+    margin-bottom: 1rem;
+   
+}
+.bar h3,span{
+ font-size:20px;
+ font-weight:300;
+
+}
+.light-bar{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.6rem;
+    background: black;
+    border-radius: 0.5rem;
+    
+}
+.percent-bar{
+    --main-bg-color: orangered;
+    
+
+}
+.percent-bar{
+    position:absolute;
+    bottom: 0;
+    left:0;
+    height: 0.6rem;
+    background: var(--main-bg-color);
+    border-radius: 0.6rem;
+    
+}
+.html-bar{
+    width: 80%;
+}
+.Javascript-bar{
+    width: 60%;;
+}
+.Css-bar{
+    width: 60%;
+}
+.Java-bar{
+    width: 40%;
+}
+.percent-bar {
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0s;
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(-0px);
+        opacity: 1;
+    }
+}
+
+.work-list{
+float:left;
+width: 33.33%;
+padding:5px;
+height: 33.3px;
+
+}
+.work::after{
+    content:"";
+    clear:both;
+    display: table;
+}
+ .work #id{
+    width: 30%;
+    border-radius: 40px;
+    display:block;
+    height:400px;
+    padding-left: 20px;
+
+} 
+.portfolio.container.work-list.work.layer{
+    height: 5px;
+    width: 5px;
+    transition: transform 0.5s;
+}
+.portfolio.container.work-list.work.layer:hover img{
+    transform: scale(0.9);
+}
+
+
+
+
+
+
+.layer {
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0s;
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(-0px);
+        opacity: 1;
+    }
+}
+.work-list{
+    transform: translateY(-20px);
+    transition: background 0.5s, transform 0.5s;  
+    background-color:transparent;
+   
+    border-radius: 190px;    
+}
+.contact.contact-text{
+    height:240px;
+    padding-top: 400px;
+    display:contents;
+    width:100%;
+    margin-right: 60px;
+    
+}
+#contact{
+    width:100%;
+    padding-top: 490px;
+
+}
+.contact-icon a{
+    
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height:40px;
+    background:transparent;
+    border:white;
+    border-radius: 50%;
+    font-size:20px;
+    color:white;
+    margin-left: 7px;
+    background-color:white;
+}
+
+
+
+
+.contact{
+    display: flex;
+    list-style: None;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0s;
+    width: 240
+    
+}
+
+.contact-right{
+    position: absolute;
+    right:-90px;
+    width: 50%;
+    height: 50%;
+    font-size: 50xpx;
+}
+
+.contact-text{
+    margin-left: 10rem;
+}
+
+form input,form textarea{
+        width:80%;
+        border:0;
+        outline:none;
+        background:purple;
+        padding:14px;
+        margin:15px 0;
+        color:white;
+        font-size: 15px;
+        border-radius: 4px;
+       
+
+}
+.contact-right  button{
+    color: white;
+    width: 20%;
+    height: 30%;
+    margin-left: 0.1rem;
+    background-color: purple;
+    box-shadow: purple,
+    0px 0px 30px orangered;
+    border-radius: 18px;
+    border-color:purple;
+    cursor: pointer;
+    font-size: 20px;
+    padding:10px;
+}
+
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(-0px);
+        opacity: 1;
+    }
+}
+
+
+.btn{
+    display:inline-block;
+    background:purple;
+    border-radius: 15px;
+    width:180px;
+    height:40px;
+    
+
+}
+.home{
+    :link { text-decoration: none; }
+}
+
+.copyright{
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background:purple ;
+    font-weight: 300;
+    margin-top: 10px;
+}
